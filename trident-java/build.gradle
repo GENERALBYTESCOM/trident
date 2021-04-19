@@ -61,5 +61,11 @@ subprojects {
         archives jar
         archives sourcesJar
     }
+
+    tasks.withType(AbstractArchiveTask) {
+        preserveFileTimestamps = false
+        reproducibleFileOrder = true
+    }
+
 }
 
